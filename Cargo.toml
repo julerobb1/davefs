@@ -1,0 +1,21 @@
+[package]
+name = "davefs"
+version = "0.1.0"
+edition = "2021"
+description = "Read-only userspace parser for Echostar/Dish DaveSystemDisk (E*FS) partition images"
+license = "MIT"
+readme = "README.md"
+keywords = ["forensics", "dvr", "echostar", "efs", "research"]
+categories = ["command-line-utilities"]
+publish = false
+
+[lib]
+name = "davefs"
+path = "src/lib.rs"
+
+[[bin]]
+name = "dave"
+path = "src/main.rs"
+
+[dependencies]
+clap = { version = "=4.5.32", features = ["derive"] }
